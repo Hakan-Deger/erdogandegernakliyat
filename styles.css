@@ -158,6 +158,15 @@ ul {
     gap: 25px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
 .nav-links a {
     font-weight: 600;
     font-size: 0.9rem;
@@ -440,8 +449,39 @@ ul {
 
 @media (max-width: 768px) {
     .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 20px;
+        width: 100%;
+        background-color: var(--white);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        gap: 0;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f5f5f5;
+        width: 100%;
+        text-align: center;
     }
     
     .info-cards {
