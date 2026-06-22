@@ -461,4 +461,26 @@ ul {
     .features-list-items li {
         justify-content: center;
     }
+
+    .top-bar-content {
+        justify-content: center;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-info a {
+        margin-left: 0;
+    }
+
+    .contact-section a {
+        font-size: 1.2rem !important;
+        padding: 12px 20px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
